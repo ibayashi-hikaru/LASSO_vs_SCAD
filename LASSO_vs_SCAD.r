@@ -32,10 +32,10 @@ print(betaLasso_corr[which(!betaLasso_corr == 0)])
 library(ncvreg)
 cat("\n\nSCAD estimator path with Indepenent  features\n\n")
 betaSCAD_indp <- ncvreg(X, y, penalty="SCAD")
-print(betaSCAD_indp)
+plot(betaSCAD_indp)
 cat("\n\nSCAD estimator path  with Correlated  features\n\n")
 betaSCAD_corr <- ncvreg(X_corr, y_corr, penalty="SCAD")
-print(betaSCAD_corr)
+plot(betaSCAD_corr)
 
 library(glmnet)
 # Part B
